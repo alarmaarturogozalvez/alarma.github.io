@@ -111,9 +111,18 @@
           document.getElementById("boton-rojo").style.display = "none";
         }
       };
-
+     client.onConnectionLost = function(responseObject) {
+  		console.log("connection is lost");
+  		if (responseObject.errorCode !== 0) {
+          document.getElementById("boton-rojo").style.display = "none";
+    			console.log("onConnectionLost:"+responseObject.errorMessage);
+    		}
+  	  };
       client.connect(options);
     }
+    // called when the client loses its connection
+ 	  
+    
     // Función para obtener los parámetros de la URL
     function obtenerParametrosDeURL() {
       const params = new URLSearchParams(window.location.search);
