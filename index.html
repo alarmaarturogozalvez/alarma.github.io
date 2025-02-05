@@ -37,9 +37,11 @@
     const user = 'hivemq.webclient.1738719443234';  // Tu usuario de HiveMQ
     const password = '5w#3p8>cHUz7F<loNA$Q';  // Tu contraseña de HiveMQ
     const topic = 'alarma';  // El tópico al que se enviará el mensaje
-
+    var MQTT_CLIENT_ID = "iot_web_"+Math.floor((1 + Math.random()) * 0x10000000000).toString(16);
+    
     // Crear el cliente MQTT
-    const client = new Paho.MQTT.Client(mqttHost, mqttPort, "cliente-web" + Math.random());
+//    const client = new Paho.MQTT.Client(mqttHost, mqttPort, "cliente-web" + Math.random());
+    const client = new Paho.MQTT.Client('wss://7499b707066b4633847ee92fdf3935e6.s1.eu.hivemq.cloud:8884/mqtt', MQTT_CLIENT_ID);
 
     // Configuración de la conexión
     client.onConnectionLost = function (responseObject) {
