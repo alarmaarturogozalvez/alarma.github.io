@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conectar a HiveMQ</title>
+  <title>Alarma Arturo Gozalvez</title>
       <!-- import jquery library -->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
 
@@ -73,7 +73,7 @@
 
     // Función para enviar mensaje al tópico
     function enviarAlarma() {
-      const mensaje = new Paho.MQTT.Message("Alarma activada");
+      const mensaje = new Paho.MQTT.Message("1");
       mensaje.destinationName = topic;
       client.send(mensaje);
       console.log('Mensaje enviado: "Alarma activada"');
