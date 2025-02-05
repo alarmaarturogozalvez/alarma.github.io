@@ -70,7 +70,7 @@
     //oculta el boton
     document.getElementById("boton-rojo").style.display = "none";
     
-    const { username, passwd, id } = obtenerParametrosDeURL();
+    const { username, passwd} = obtenerParametrosDeURL();
 
     // Datos de conexión
     const mqttHost = '7499b707066b4633847ee92fdf3935e6.s1.eu.hivemq.cloud';  // Cambia a tu broker de HiveMQ
@@ -118,10 +118,7 @@
             const params = new URLSearchParams(window.location.search);
             const username = params.get("username");
             const passwd = params.get("passwd");
-            const id = params.get("id");
-            console.log(username);
-            console.log(passwd);
-            console.log(id);
+
             return { username, passwd, id};
         }
     
