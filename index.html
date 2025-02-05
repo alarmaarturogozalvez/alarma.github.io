@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
 
   <style>
-    #boton-rojo {
+    #boton-rojo2 {
       width: 100px;
       height: 100px;
       background-color: red;
@@ -23,12 +23,48 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn-sos {
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+        }
+
+        .btn-sos:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-sos:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: darkred;
+        }
+
+        .btn-sos:focus {
+            outline: none;
+        }
   </style>
 </head>
 <body>
 
   <!-- Botón Rojo -->
-  <button id="boton-rojo"></button>
+  <button id="boton-rojo" class="btn-sos" ></button>
 
   <script>
     // Datos de conexión
