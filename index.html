@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conectar a HiveMQ</title>
+      <!-- import jquery library -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+
+    <!-- import paho MQTT library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+
   <style>
     #boton-rojo {
       width: 100px;
@@ -24,7 +30,6 @@
   <!-- Botón Rojo -->
   <button id="boton-rojo"></button>
 
-  <script src="https://unpkg.com/paho-mqtt@1.0.0/mqttws31.js"></script>
   <script>
     // Datos de conexión
     const mqttHost = '7499b707066b4633847ee92fdf3935e6.s1.eu.hivemq.cloud';  // Cambia a tu broker de HiveMQ
